@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # 3rd party
     "rest_framework",
+    "corsheaders",
     # Local
     "todos.apps.TodosConfig",
 ]
@@ -131,3 +132,10 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.AllowAny",
     ]
 }
+
+CORS_ALLOWED_ORIGINS = (
+    "http://localhost:3000",
+    "http://localhost:8000",
+)
+
+CSRF_TRUSTED_ORIGINS = ["localhost:3000"]
